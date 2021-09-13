@@ -133,3 +133,88 @@ else {window.location = outfits}
 
 >>> Array .filter >>> all shirts that picked = true, save to const
 
+
+STRETCH GOALS
+
+- Weather
+    - add to dataset
+   
+- Clothing styles
+- * Randomize / Edit single clothing items
+- * Week's worth of outfits / M-F M-S 
+-       - Save favorite outfit combos
+-       - Set current outfit as an arrays
+- Career outfits ie cop firefighter
+
+MVP
+- clothing colors
+
+
+
+README:
+- Name of Project:
+-   Miss Match
+-   Dress yo'self
+-   MISMATCH
+-   
+- names of team members
+ - ---* co co hollywood *---
+ - karl (pretty out there)
+ - taylor
+ - Julius 
+-   
+- description of proj
+-       GUARANTEED YOU WILL LOOK 2% BETTER AT MOST
+-       
+- What is our problem? I cant decide which outfit blah blahb
+-       --- solution:: outfit rando
+-       
+-  Attribute credit where is due 
+
+
+FILE STRUCTURE
+- Landing/Splash = index
+- Results -
+-      - HTML
+-      - CSS
+-      - JS
+- ABOUT US -
+-       - HTML
+-       - CSS 
+-       - JS 
+
+FILE NAMING CONVENTIONS -
+- Bring it up in slack/zoom
+- Kabob for filenames
+- Camel for JS
+- Pluralize? 
+
+==>>> Comment Driven Development
+
+DAILY WORKFLOW:
+- Meet at 9am (Beginning of day) check in, go over challenges, achievements, check in
+- Huddle before lunch (10 min before lunch) 11:50 
+- 3pm (2 hr after lunch)
+
+- Call a huddle if you need?
+
+- Class time working hours
+-  Not immediate urgency: Slack 
+-  URGENT - zoom
+
+- TESTING -
+- Picked/chosen item - Pure
+- Randomize --- IMPURE!!! 
+- Render - Pure
+
+
+
+
+
+
+
+
+
+
+
+
