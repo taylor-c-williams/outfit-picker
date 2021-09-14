@@ -40,9 +40,9 @@ export function getRandomClothing() {
 }
 
 export function renderItems() {
-    const shirtDiv = document.getElementById('shirts-choices');
-    const pantsDiv = document.getElementById('pants-choices');
-    const shoeDiv = document.getElementById('shoes-choices');
+    const shirtDiv = document.getElementById('');
+    const pantsDiv = document.getElementById('');
+    const shoeDiv = document.getElementById('');
 
 
     const clothingArray = getRandomClothing();
