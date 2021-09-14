@@ -3,13 +3,13 @@ import data from './data.js';
 const CLOSET = 'CLOSET';
 
 export function getClothing() {
-    const pullClothing = localStorage.getItem(data);
+    const pullClothing = localStorage.getItem(CLOSET);
     if (!pullClothing) {
         return data;
     }
-    const parseUser = JSON.parse(pullClothing);
-
-    return parseUser;
+    const parseClothing = JSON.parse(pullClothing);
+    // console.log(parseUser);
+    return parseClothing;
 }
 
 
@@ -20,8 +20,9 @@ export function setClothing() {
 
 export function getSelectedClothing() {
     const clothing = getClothing();
-    console.log(clothing);
-    return clothing.filter((item) => item.selected);
+    // console.log(clothing);
+    const selectedClothing = clothing.filter((item) => item.selected);
+    return selectedClothing;
 }
 
 export function getRandomIndex() {
@@ -54,12 +55,11 @@ export function renderItems() {
 
     const clothingArray = getSelectedClothing();
     console.log(clothingArray);
-    if (clothingArray.length) {
 
-        shirtDiv.src = clothingArray[0].image;
-        pantsDiv.src = clothingArray[1].image;
-        shoeDiv.src = clothingArray[2].image;
-    }
+    shirtDiv.src = `../assets/${clothingArray[0].image}`;
+    pantsDiv.src = `../assets/${clothingArray[1].image}`;
+    // shoeDiv.src = clothingArray[2].image;
+
 
     randomizeButton.addEventListener('click', () => {
 
