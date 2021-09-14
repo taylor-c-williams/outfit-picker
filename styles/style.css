@@ -20,9 +20,19 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Space Mono', monospace;
 }
 
 i {
     font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+nav :link, :active, :visited {
+text-decoration: none;
 }
