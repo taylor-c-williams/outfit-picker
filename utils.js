@@ -13,8 +13,8 @@ export function getClothing() {
 }
 
 
-export function setClothing() {
-    const stringCloset = JSON.stringify(data);
+export function setClothing(closet) {
+    const stringCloset = JSON.stringify(closet);
     localStorage.setItem(CLOSET, stringCloset);
 }
 
@@ -56,8 +56,8 @@ export function renderItems() {
     const clothingArray = getSelectedClothing();
     console.log(clothingArray);
 
-    shirtDiv.src = `../assets/${clothingArray[0].image}`;
-    pantsDiv.src = `../assets/${clothingArray[1].image}`;
+    shirtDiv.src = `../assets/clothes/${clothingArray[0].image}`;
+    // pantsDiv.src = `../assets/clothes/${clothingArray[1].image}`;
     // shoeDiv.src = clothingArray[2].image;
 
 

@@ -30,7 +30,7 @@ export default [
     {
         name:'shirt-1',
         id: 5,
-        image: 'hanger.png',
+        image: 'tops01.jpg',
         selected: false,
         category: 'shirt',
     },
