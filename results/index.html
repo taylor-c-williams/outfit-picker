@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>C H E R S C L O S E T</title>
+		<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
+	</head>
+	<body>
+		<content>
+			<div id="content" class="content">
+				<div class="control-box close-box">
+					<a class="control-box-inner"></a>
+				</div>
+				<div class="control-box zoom-box">
+					<div class="control-box-inner">
+						<div class="zoom-box-inner"></div>
+					</div>
+				</div>
+				<div class="control-box windowshade-box">
+					<div class="control-box-inner">
+						<div class="windowshade-box-inner"></div>
+					</div>
+				</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Results</title>
-</head>
 
-<body>
-    <nav id="nav" class="nav">Nav
-        <div>
-            <a href="../index.html">home</a>
-        </div>
-        <div>
-            <a href="../about-us/index.html">about us</a>
-        </div>
-    </nav>
+                <!-- Header -->
+				<h1 class="title">Outfit Picker!</h1>
+				<div class="inner">
+					<div class="icon"><img src="../assets/img/bomb.png" /></div>
+
+                    <!-- Navigation -->
+					<nav id="nav" class="nav">
+                        <button class="command_button">
+							<a href="../index.html">Home</a>
+						</button>
+                        <button class="command_button">
+							<a href="../results/index.html">Your Closet</a>
+						</button>
+						<button class="command_button">
+							<a href="../about-us/index.html">About us</a>
+						</button>
+
+					</nav>
+
+					<hr />
+
+                    <!-- Content -->
 
     <hr>
     <div id="guy" class="guy">
@@ -28,7 +57,7 @@
     </div>
     <button id="randomize" class="randomize">Dress Me!</button>
 
-    <script type="module" src="./results.js"></script>
-</body>
-
+		</content>
+		<script type="module" src="./app.js"></script>
+	</body>
 </html>

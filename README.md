@@ -208,7 +208,10 @@ DAILY WORKFLOW:
 - Render - Pure
 
 
-
+ATTRIBUTION 
+----
+ChicagoFLF font by Robin Casady (Casady & Greene) - (Public Domain)
+http://moorstation.org/typoasis/designers/casady_greene/index.htm
 
 
 
