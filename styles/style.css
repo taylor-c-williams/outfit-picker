@@ -2,14 +2,6 @@
     box-sizing: border-box;
 }
 
-/* body, html {
-    height:100%;
-    width:100%;
-    margin:0;
-    padding:0;
-    font-family: chicago;
-} */
-
 @font-face {
     font-family: 'ChicagoFLF';
     src: url('fonts/ChicagoFLF.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -30,9 +22,47 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
 }
 
 nav :link, :active, :visited {
 text-decoration: none;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5em;
+    margin:35px;
+}
+
+form { 
+    font-size:2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-button {
+    background-color: #dedede;
+    display: inline-block;
+    margin:30px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    box-shadow: var(--button-box-shadow);
+}
+.submit-button:hover {
+    box-shadow:
+	var(--button-box-shadow),
+        var(--button-hover-bezel);
+}
+.submit-button:active {
+    color: #fff;
+    background-color: #666;
+    box-shadow:
+	var(--button-hover-bezel),
+	inset -1px -1px 0px 0px #888,
+	inset -2px -2px 0px 0px #777,
+	inset 1px 1px 0px 0px #444,
+	inset 2px 2px 0px 0px #555;
 }

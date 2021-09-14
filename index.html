@@ -1,65 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>DRESS YOSELF</title>
-  <link rel="shortcut icon" href="../assets/img/favicon.ico" />
-  <link rel="stylesheet" href="../styles/base.css">
-  <link rel="stylesheet" href="../styles/style.css">
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-  <!-- <script>
-  $( function() {
-      $( "#content" ).draggable({ handle: "h1.title" });
-  } );
-  </script> -->
-</head>
-<body>
-  <!-- <noscript><p><em>This page requires JavaScript.</em></p></noscript> -->
+	<head>
+		<meta charset="UTF-8" />
+		<title>C H E R S C L O S E T</title>
+		<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
+	</head>
 
+	<body>
+		<content>
+			<div id="content" class="content">
+				<div class="control-box close-box">
+					<a class="control-box-inner"></a>
+				</div>
+				<div class="control-box zoom-box">
+					<div class="control-box-inner">
+						<div class="zoom-box-inner"></div>
+					</div>
+				</div>
+				<div class="control-box windowshade-box">
+					<div class="control-box-inner">
+						<div class="windowshade-box-inner"></div>
+					</div>
+				</div>
 
-  <div id="content" class="content">
-    <div class="control-box close-box"><a class="control-box-inner"></a></div>
-    <div class="control-box zoom-box"><div class="control-box-inner"><div class="zoom-box-inner"></div></div></div>
-    <div class="control-box windowshade-box"><div class="control-box-inner"><div class="windowshade-box-inner"></div></div></div>
+				<!-- Header -->
+				<h1 class="title">Outfit Picker!</h1>
+				<div class="inner">
+					<div class="icon"><img src="../assets/img/bomb.png" /></div>
 
-    <h1 class="title">Outfit Picker!</h1>
-    <div class="inner">
-      <div class="icon"><img src="../assets/img/bomb.png" /></div>
-      <ul>
-	<li><class "s">
+					<!-- Navigation -->
+					<nav id="nav" class="nav">
+						<button class="command_button">
+							<a href="./index.html">Home</a>
+						</button>
+						<button class="command_button">
+							<a href="./results/index.html">Your Closet</a>
+						</button>
+						<button class="command_button">
+							<a href="./about-us/index.html">About us</a>
+						</button>
+					</nav>
 
+					<hr />
 
-    <nav id = "nav" class = "nav">
-      <div>
-         <button class="command_button"><a href = "./results/index.html">Results</a></button>
-      </div>
-      <div>
-         <button class="command_button"><a href = "./about-us/index.html">About Us</a></button>
-      </div>
-  </nav>
-  
-  <hr>
-  
-  <div id = "title" class = "title">Title</div>
-  <img src="./assets/clothes/greenMan3.png">
+					<!-- Content -->
 
-  <div id = "instructions" class = "instructions">Instructions</div>
-  
-  <form action="" class = "clothing-layout" id = "clothing-layout">
-      <!-- <div id = "hats-choices" class = "hats-choices"></div> -->
-      <div id = "shirts-choices" class = "shirts-choices"></div>
-      <div id = "pants-choices" class = "pants-choices"></div>
-      <!-- <div id = "shoes-choices" class = "shoes-choices"></div> -->
+					<div id="title" class="subtitle">
+						Select your favorites to add to your closet
+					</div>
 
-      <button id = "choices-submit" class = "command_button">Submit</button>
-  </form>
+					<ul>
+						<li>
+							<img src="./assets/clothes/tops01.jpg" height="350px" />
+							<img src="./assets/clothes/tops02.jpg" height="350px" />
+							<img src="./assets/clothes/tops03.jpg" height="350px" />
+							<img src="./assets/clothes/tops04.jpg" height="350px" />
+							<img src="./assets/clothes/tops05.jpg" height="350px" />
+							<img src="./assets/clothes/tops06.jpg" height="350px" />
+							<img src="./assets/clothes/tops07.jpg" height="350px" />
+							<img src="./assets/clothes/tops08.jpg" height="350px" />
+							<img src="./assets/clothes/tops09.jpg" height="350px" />
+							<img src="./assets/clothes/tops10.jpg" height="350px" />
 
+							<img src="./assets/clothes/bottoms01.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms02.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms03.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms04.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms05.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms06.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms07.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms08.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms09.jpg" height="350px" />
+							<img src="./assets/clothes/bottoms10.jpg" height="350px" />
 
-  </li>
-      </ul>
-    </div>
- </div>
- <script type="module" src="./app.js"></script>
-</body>
+							<form action="" class="clothing-layout" id="clothing-layout">
+								<!-- <div id = "hats-choices" class = "hats-choices"></div> -->
+								<div id="shirts-choices" class="shirts-choices"></div>
+								<div id="pants-choices" class="pants-choices"></div>
+								<!-- <div id = "shoes-choices" class = "shoes-choices"></div> -->
+
+								<button id="choices-submit" class="submit-button">
+									Submit
+								</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</content>
+		<script type="module" src="./app.js"></script>
+	</body>
 </html>

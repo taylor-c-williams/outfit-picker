@@ -35,9 +35,7 @@ body {
     margin: 0;
     height: 100%;
     font-family: 'ChicagoFLF', 'Times New Roman', 'Georgia', serif;
-    font-size: 12px;
     font-weight: normal;
-    overflow: hidden;
 }
 
 button {
@@ -55,10 +53,9 @@ a {
 .content {
     position: relative;
     z-index: 2;
-    font-size: 21px;
     font-weight: normal;
     width: 80%;
-    margin: 100px auto 0;
+    margin: 100px auto auto;
     border: 1px solid #111;
     background: #ccc;
     box-shadow:
@@ -69,7 +66,7 @@ a {
 .content .inner {
     margin: 2px 4px 4px 4px;
     border: 1px solid #111;
-    background-color: #ddd;
+    background-color: #fff;
     box-shadow:
 	-1px -1px 0px 0px #999,
 	1px 1px 0px 0px #fff,
@@ -147,7 +144,6 @@ a {
     border-bottom: 1px solid #000;
 }
 .content .command_button {
-    /* height: 22px; */
     background-color: #dedede;
     display: inline-block;
     margin-bottom: 7px;
