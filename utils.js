@@ -1,7 +1,12 @@
+import data from './data.js';
+
 const USER = 'USER';
 
 export function getClothing() {
     const pullClothing = localStorage.getItem(USER);
+    if (!pullClothing) {
+        return data;
+    }
     const parseUser = JSON.parse(pullClothing);
 
     return parseUser;
@@ -15,6 +20,7 @@ export function setClothing() {
 
 export function getSelectedClothing() {
     const clothing = getClothing();
+    console.log(clothing);
     return clothing.filter((item) => item.selected);
 }
 
@@ -32,24 +38,39 @@ export function getRandomClothing() {
     let randomClothing3 = getRandomIndex();
 
     return [
-        itemData[randomClothing1],
-        itemData[randomClothing2],
-        itemData[randomClothing3]
+        data[randomClothing1],
+        data[randomClothing2],
+        data[randomClothing3]
 
     ];
 }
 
 export function renderItems() {
-    const shirtDiv = document.getElementById('');
-    const pantsDiv = document.getElementById('');
-    const shoeDiv = document.getElementById('');
+    const shirtDiv = document.getElementById('shirt');
+    const pantsDiv = document.getElementById('pants');
+    const shoeDiv = document.getElementById('shoes');
+    const randomizeButton = document.getElementById('randomize');
 
 
-    const clothingArray = getRandomClothing();
+    const clothingArray = getSelectedClothing();
+    console.log(clothingArray);
+    if (clothingArray.length) {
 
-    shirtDiv.src = clothingArray[0].image;
-    pantsDiv.src = clothingArray[1].image;
-    shoeDiv.src = clothingArray[2].image;
+        shirtDiv.src = clothingArray[0].image;
+        pantsDiv.src = clothingArray[1].image;
+        shoeDiv.src = clothingArray[2].image;
+    }
+
+    randomizeButton.addEventListener('click', () => {
+
+        const selectedClothing = getSelectedClothing();
+        getRandomClothing(selectedClothing);
+
+
+
+
+
+    });
 
 
 
