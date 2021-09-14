@@ -30,7 +30,7 @@ html,
 body {
     -moz-user-select: none;
     -webkit-user-select: none;
-    background-image: url("img/patterns/128.png");
+    background-image: url("../assets/background.jpg");
     background-repeat: repeat;
     margin: 0;
     height: 100%;
@@ -39,6 +39,7 @@ body {
     font-weight: normal;
     overflow: hidden;
 }
+
 button {
     font-family: inherit;
     font-size: inherit;

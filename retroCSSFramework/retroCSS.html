@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Mac OS 8.1</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="../styles/base.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
@@ -19,13 +19,45 @@
     <div class="control-box close-box"><a class="control-box-inner"></a></div>
     <div class="control-box zoom-box"><div class="control-box-inner"><div class="zoom-box-inner"></div></div></div>
     <div class="control-box windowshade-box"><div class="control-box-inner"><div class="windowshade-box-inner"></div></div></div>
-    <h1 class="title">Unimplemented!</h1>
+    <h1 class="title">Outfit Picker!</h1>
     <div class="inner">
-      <div class="icon"><img src="img/bomb.png" /></div>
+      <div class="icon"><img src="../assets/img/bomb.png" /></div>
       <ul>
-	<li><class "s">A system error has occurred. Please reboot your Mac.</li>
+	<li><class "s">
+
+
+
+    <nav id = "nav" class = "nav">Nav
+      <div>
+          <a href = "./results/index.html">results</a>
+      </div>
+      <div>
+          <a href = "./about-us/index.html">about us</a>
+      </div>
+  </nav>
+  
+  <hr>
+  
+  <div id = "title" class = "title">Title</div>
+
+  <div id = "instructions" class = "instructions">Instructions</div>
+  
+  <form action="" class = "clothing-layout" id = "clothing-layout">
+      <!-- <div id = "hats-choices" class = "hats-choices"></div> -->
+      <div id = "shirts-choices" class = "shirts-choices"></div>
+      <div id = "pants-choices" class = "pants-choices"></div>
+      <!-- <div id = "shoes-choices" class = "shoes-choices"></div> -->
+
+      <button id = "choices-submit" class = "command_button">Submit</button>
+  </form>
+
+  
+  <script type="module" src="./app.js"></script>
+
+
+  </li>
       </ul>
-      <button class="command_button">Reboot</button>
+      <!-- <button class="command_button">Reboot</button> -->
     </div>
  </div>
 </body>
