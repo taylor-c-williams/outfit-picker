@@ -1,3 +1,5 @@
+import { getClothing, setClothing } from './utils.js';
+
 export function switchSelected(id) {
     const clothing = getClothing();
     for (let singleItem of clothing) {
@@ -8,6 +10,5 @@ export function switchSelected(id) {
             singleItem.selected = true;
         }
         setClothing(clothing);
-        // renderClothing?
     }
 }
