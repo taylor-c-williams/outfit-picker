@@ -7,21 +7,7 @@ populateShirts();
 populatePants();
 
 const allData = data;
-
 setClothing(allData);
-
-// for (let item of allData) { 
-//     console.log(item.image);
-// }
-
-
-// console.log(allData);
-
-// const clothinhgSelectionEL = document.getElementById('clothing-selection');
-// const clothingLayoutEL = document.getElementById('clothing-layout');
-// const shirtsChoicesEL = document.getElementById('shirts-choices');
-// const pantsChoicesEL = document.getElementById('pants-choices');
-// const choicesSubmitbuttonEl = document.getElementById('choices-submit');
 
 
 

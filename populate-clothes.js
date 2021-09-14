@@ -4,7 +4,7 @@ import { getClothing } from './utils.js';
 
 //grab ul element for shirts
 const shirtUl = document.getElementById('shirts-choices');
-const pantsUl = document.getElementById('pants-choices');
+
 
 export function populateShirts() {
     const clothingArray = getClothing();
@@ -16,6 +16,8 @@ export function populateShirts() {
     });
     renderClothingItems(shirts, shirtUl);
 }
+
+const pantsUl = document.getElementById('pants-choices');
 
 export function populatePants() {
     const clothingArray = getClothing();
