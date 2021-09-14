@@ -1,11 +1,13 @@
 // import functions and grab DOM elements
+import data from './data.js';
+import { setClothing } from './utils.js';
+import { populateShirts, populatePants } from './populate-clothes.js';
 
+populateShirts();
+populatePants();
 
-const clothinhgSelectionEL = document.getElementById('clothing-selection');
-const clothingLayoutEL = document.getElementById('clothing-layout');
-const shirtsChoicesEL = document.getElementById('shirts-choices');
-const pantsChoicesEL = document.getElementById('pants-choices');
-const choicesSubmitbuttonEl = document.getElementById('choices-submit');
+const allData = data;
+setClothing(allData);
 
 
 
