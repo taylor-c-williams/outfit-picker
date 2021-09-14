@@ -1,9 +1,10 @@
 // import functions and grab DOM elements
 import data from './data.js';
 import { setClothing } from './utils.js';
-import { populateShirts } from './populate-clothes.js';
+import { populateShirts, populatePants } from './populate-clothes.js';
 
 populateShirts();
+populatePants();
 
 const allData = data;
 

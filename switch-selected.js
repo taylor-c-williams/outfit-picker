@@ -2,13 +2,12 @@ import { getClothing, setClothing } from './utils.js';
 
 export function switchSelected(id) {
     const clothing = getClothing();
-    for (let singleItem of clothing) {
-        if (id === singleItem.id && singleItem.selected === true) {
-            singleItem.selected = false;
-        }
-        else if (id === singleItem.id && singleItem.selected === false) {
-            singleItem.selected = true;
-        }
-        setClothing(clothing);
-    }
+    const singleClothing = clothing.find((item) => item.id === id);
+    singleClothing.selected = !singleClothing.selected;
+    // if (singleClothing.selected === true) {
+    //     singleClothing.selected = false;
+    // } else {
+    //     singleClothing.selected = true;
+    // }
+    setClothing(clothing);
 }

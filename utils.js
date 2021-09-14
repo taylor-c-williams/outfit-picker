@@ -1,6 +1,6 @@
 import data from './data.js';
 
-
+const CLOSET = 'CLOSET';
 
 export function getClothing() {
     const pullClothing = localStorage.getItem(data);
@@ -14,8 +14,8 @@ export function getClothing() {
 
 
 export function setClothing() {
-    const stringUser = JSON.stringify(data);
-    localStorage.setItem(data, stringUser);
+    const stringCloset = JSON.stringify(data);
+    localStorage.setItem(CLOSET, stringCloset);
 }
 
 export function getSelectedClothing() {
