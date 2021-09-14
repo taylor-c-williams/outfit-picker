@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'ChicagoFLF';
-    src: url('fonts/ChicagoFLF.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('../fonts/ChicagoFLF.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 main {
@@ -37,10 +37,10 @@ text-decoration: none;
 }
 
 form { 
-    font-size:2em;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:1.25em;
 }
 
 .submit-button {
