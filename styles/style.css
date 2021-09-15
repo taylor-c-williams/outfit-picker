@@ -49,12 +49,8 @@ ul img{
     cursor:pointer;
 }
 
-input[type="checkbox"]:checked {
-
-  }
-
   input:checked + img {
-	border: solid 5px hotpink;
+	border: inset 4px #ade8f4;
 	border-radius: 5px;
   }
 
