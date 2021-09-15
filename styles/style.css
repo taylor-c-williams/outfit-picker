@@ -29,7 +29,7 @@ text-decoration: none;
 
 /* Clothing Form */
 
-form { 
+form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,3 +94,8 @@ a:link{
     justify-content: center;
 }
 
+h2 {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
