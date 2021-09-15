@@ -7,9 +7,9 @@ const topUl = document.getElementById('tops-choices');
 
 export function populateTops() {
     const clothingArray = getClothing();
-// grab all tops from local storage
+    // grab all tops from local storage
     const tops = clothingArray.filter((oneClothing) => {
-        if (oneClothing.category === 'top'){
+        if (oneClothing.category === 'top') {
             return oneClothing.category;
         }
     });
@@ -21,12 +21,11 @@ const pantsUl = document.getElementById('pants-choices');
 
 export function populatePants() {
     const clothingArray = getClothing();
-// grab all pants from local storage
+    // grab all pants from local storage
     const pants = clothingArray.filter((oneClothing) => {
-        if (oneClothing.category === 'pants'){
+        if (oneClothing.category === 'pants') {
             return oneClothing.category;
         }
     });
     renderClothingItems(pants, pantsUl);
 }
-
