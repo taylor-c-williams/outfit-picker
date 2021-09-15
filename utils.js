@@ -54,7 +54,6 @@ export function renderItems() {
 
 
     const clothingArray = getSelectedClothing();
-    console.log(clothingArray);
 
 
     topDiv.src = `../assets/clothes/${clothingArray[0].image}`;
