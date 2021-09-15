@@ -1,6 +1,5 @@
 import { switchSelected } from './switch-selected.js';
 
-
 export function renderClothingItems(itemsArray, ulToPopulate) {
 
     for (let item of itemsArray) {
@@ -15,7 +14,7 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
 
         img.src = `./assets/clothes/${item.image}`;
         switchCheck.type = 'checkbox';
-        // switchCheck.style.display = 'none';
+        switchCheck.style.display = 'none';
 
 // add event listener with switch-select function to checkbox
         img.addEventListener('click', () => switchSelected(item.id));
