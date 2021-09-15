@@ -66,3 +66,7 @@ form {
 	inset 1px 1px 0px 0px #444,
 	inset 2px 2px 0px 0px #555;
 }
+
+img {
+    width: 10%;
+}
