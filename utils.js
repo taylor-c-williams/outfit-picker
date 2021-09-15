@@ -2,6 +2,11 @@ import data from './data.js';
 
 const CLOSET = 'CLOSET';
 
+export function setClothing(closet) {
+    const stringCloset = JSON.stringify(closet);
+    localStorage.setItem(CLOSET, stringCloset);
+}
+
 export function getClothing() {
     const pullClothing = localStorage.getItem(CLOSET);
     if (!pullClothing) {
@@ -9,12 +14,6 @@ export function getClothing() {
     }
     const parseClothing = JSON.parse(pullClothing);
     return parseClothing;
-}
-
-
-export function setClothing(closet) {
-    const stringCloset = JSON.stringify(closet);
-    localStorage.setItem(CLOSET, stringCloset);
 }
 
 export function getSelectedClothing() {
@@ -27,9 +26,7 @@ export function getRandomIndex() {
     const selectedArray = getSelectedClothing();
     const randomNum = Math.floor(Math.random() * selectedArray.length);
     return randomNum;
-
 }
-
 
 export function getRandomClothing() {
     let randomClothing1 = getRandomIndex();
@@ -40,19 +37,7 @@ export function getRandomClothing() {
         data[randomClothing1],
         data[randomClothing2],
         data[randomClothing3]
-
     ];
-}
-
-export function renderItems() {
-    const topDiv = document.getElementById('top');
-    const pantsDiv = document.getElementById('pants');
-
-    const randomShirt = getRandomShirt();
-    topDiv.src = `../assets/clothes/${randomShirt.image}`;
-
-    const randomPants = getRandomPants();
-    pantsDiv.src = `../assets/clothes/${randomPants.image}`;
 }
 
 export function getRandomShirt() {
@@ -75,4 +60,15 @@ export function getRandomPants() {
     });
     const randomIndex = Math.floor(Math.random() * getSelectedPants.length);
     return getSelectedPants[randomIndex];
+}
+
+export function renderItems() {
+    const topDiv = document.getElementById('top');
+    const pantsDiv = document.getElementById('pants');
+
+    const randomShirt = getRandomShirt();
+    topDiv.src = `../assets/clothes/${randomShirt.image}`;
+
+    const randomPants = getRandomPants();
+    pantsDiv.src = `../assets/clothes/${randomPants.image}`;
 }

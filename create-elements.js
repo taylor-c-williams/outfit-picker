@@ -6,13 +6,13 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
 
 // create a li to hold the button image and button
         const li = document.createElement('li');
+        
 // create img and checkbox elements
         const img = document.createElement('img');
         const switchCheck = document.createElement('input');
         const label = document.createElement('label');
 
 // for the img grab image
-
         img.src = `./assets/clothes/${item.image}`;
         switchCheck.type = 'checkbox';
         switchCheck.style.display = 'none';
