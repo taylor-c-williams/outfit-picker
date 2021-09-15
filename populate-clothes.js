@@ -2,21 +2,21 @@ import { renderClothingItems } from './create-elements.js';
 import { getClothing } from './utils.js';
 
 
-//grab ul element for shirts
-const shirtUl = document.getElementById('shirts-choices');
+//grab ul element for tops
+const topUl = document.getElementById('tops-choices');
 
-
-export function populateShirts() {
+export function populateTops() {
     const clothingArray = getClothing();
-// grab all shirts from local storage
-    const shirts = clothingArray.filter((oneClothing) => {
-        if (oneClothing.category === 'shirt'){
+// grab all tops from local storage
+    const tops = clothingArray.filter((oneClothing) => {
+        if (oneClothing.category === 'top'){
             return oneClothing.category;
         }
     });
-    renderClothingItems(shirts, shirtUl);
+    renderClothingItems(tops, topUl);
 }
 
+//grab ul element for pants
 const pantsUl = document.getElementById('pants-choices');
 
 export function populatePants() {
