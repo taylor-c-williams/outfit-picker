@@ -46,7 +46,7 @@ export function getRandomClothing() {
 
 export function renderItems() {
     const topDiv = document.getElementById('top');
-    const pantsDiv = document.getElementById('pants');
+    // const pantsDiv = document.getElementById('pants');
     // const shoeDiv = document.getElementById('shoes');
     const randomizeButton = document.getElementById('randomize');
 
