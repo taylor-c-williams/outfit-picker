@@ -12,6 +12,4 @@ const randomizeButton = document.getElementById('randomize');
 
 randomizeButton.addEventListener('click', () => {
     renderItems();
-
-
 });
