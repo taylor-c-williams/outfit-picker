@@ -12,9 +12,9 @@ toDressingRoomBtn.addEventListener('click', () => {
     const numberOfPants = checkSelectedPants();
 
     if (numberOfTops < 3) {
-        alert('more tops!');
+        alert('As if you can look fly without picking more tops!');
     } else if (numberOfPants < 3) {
-        alert('more pants!');
+        alert('You picked enough skirts... not!');
     } else window.location = './results';
 }
 );
