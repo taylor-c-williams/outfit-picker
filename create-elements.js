@@ -10,6 +10,7 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
         const img = document.createElement('img');
         const switchCheck = document.createElement('input');
         const label = document.createElement('label');
+
 // for the img grab image
 
         img.src = `./assets/clothes/${item.image}`;
