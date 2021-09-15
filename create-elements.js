@@ -1,6 +1,5 @@
 import { switchSelected } from './switch-selected.js';
 
-
 export function renderClothingItems(itemsArray, ulToPopulate) {
 
     for (let item of itemsArray) {
@@ -13,7 +12,7 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
         const label = document.createElement('label');
 // for the img grab image
 
-        img.src = `./assets/${item.image}`;
+        img.src = `./assets/clothes/${item.image}`;
         switchCheck.type = 'checkbox';
         switchCheck.style.display = 'none';
 

@@ -8,19 +8,17 @@ export function getClothing() {
         return data;
     }
     const parseClothing = JSON.parse(pullClothing);
-    // console.log(parseUser);
     return parseClothing;
 }
 
 
-export function setClothing() {
-    const stringCloset = JSON.stringify(data);
+export function setClothing(closet) {
+    const stringCloset = JSON.stringify(closet);
     localStorage.setItem(CLOSET, stringCloset);
 }
 
 export function getSelectedClothing() {
     const clothing = getClothing();
-    // console.log(clothing);
     const selectedClothing = clothing.filter((item) => item.selected);
     return selectedClothing;
 }
@@ -47,17 +45,17 @@ export function getRandomClothing() {
 }
 
 export function renderItems() {
-    const shirtDiv = document.getElementById('shirt');
-    const pantsDiv = document.getElementById('pants');
-    const shoeDiv = document.getElementById('shoes');
+    const topDiv = document.getElementById('top');
+    // const pantsDiv = document.getElementById('pants');
+    // const shoeDiv = document.getElementById('shoes');
     const randomizeButton = document.getElementById('randomize');
 
 
     const clothingArray = getSelectedClothing();
-    console.log(clothingArray);
+ 
 
-    shirtDiv.src = `../assets/${clothingArray[0].image}`;
-    pantsDiv.src = `../assets/${clothingArray[1].image}`;
+    topDiv.src = `../assets/clothes/${clothingArray[0].image}`;
+    // pantsDiv.src = `../assets/clothes/${clothingArray[1].image}`;
     // shoeDiv.src = clothingArray[2].image;
 
 
