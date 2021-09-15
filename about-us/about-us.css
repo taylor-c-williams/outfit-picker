@@ -2,6 +2,7 @@
     margin:5px;
 }
 
+
 .container {
     display: flex;
     text-align: center;
@@ -16,3 +17,10 @@
 .taylor {
     margin-right: 20px;
 }
+
+.bio-zone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
