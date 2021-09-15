@@ -37,10 +37,10 @@ text-decoration: none;
 }
 
 form { 
-    font-size:2em;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:1.25em;
 }
 
 .submit-button {
