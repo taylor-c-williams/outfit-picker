@@ -21,6 +21,4 @@ randomizeButton.addEventListener('click', () => {
     const randomPants = getRandomPants();
     pantsDiv.src = `../assets/clothes/${randomPants.image}`;
 
-
-
 });

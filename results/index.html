@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>C H E R S C L O S E T</title>
-		<link rel="shortcut icon" href="../assets/img/favicon.ico" />
-		<link rel="stylesheet" href="../styles/base.css" />
-		<link rel="stylesheet" href="../styles/style.css" />
-	</head>
-	<body>
-		<content>
-			<div id="content" class="content">
-				<div class="control-box close-box">
-					<a class="control-box-inner"></a>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>C H E R S C L O S E T</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+	<link rel="stylesheet" href="../styles/base.css" />
+	<link rel="stylesheet" href="../styles/style.css" />
+	<link rel="stylesheet" href="./results.css" />
+</head>
+
+<body>
+	<content>
+
+		<!-- Mac '87 Window Layout -->
+		<div id="content" class="content">
+			<div class="control-box close-box">
+				<a class="control-box-inner"></a>
+			</div>
+			<div class="control-box zoom-box">
+				<div class="control-box-inner">
+					<div class="zoom-box-inner"></div>
 				</div>
-				<div class="control-box zoom-box">
-					<div class="control-box-inner">
-						<div class="zoom-box-inner"></div>
-					</div>
+			</div>
+			<div class="control-box windowshade-box">
+				<div class="control-box-inner">
+					<div class="windowshade-box-inner"></div>
 				</div>
-				<div class="control-box windowshade-box">
-					<div class="control-box-inner">
-						<div class="windowshade-box-inner"></div>
-					</div>
-				</div>
+			</div>
 
+			<!-- Header -->
+			<h1 class="title">Outfit Picker!</h1>
+			<div class="inner">
+				<div class="icon"><img src="../assets/img/bomb.png" /></div>
 
-                <!-- Header -->
-				<h1 class="title">Outfit Picker!</h1>
-				<div class="inner">
-					<div class="icon"><img src="../assets/img/bomb.png" /></div>
+				<!-- Navigation -->
+				<nav id="nav" class="nav">
+					<button class="command_button">
+						<a href="../index.html"><u>H</u>ome</a>
+					</button>
+					<button class="command_button">
+						<a href="../results/index.html"><u>Y</u>our Closet</a>
+					</button>
+					<button class="command_button">
+						<a href="../about-us/index.html"><u>A</u>bout us</a>
+					</button>
 
-                    <!-- Navigation -->
-					<nav id="nav" class="nav">
-                        <button class="command_button">
-							<a href="../index.html"><u>H</u>ome</a>
-						</button>
-                        <button class="command_button">
-							<a href="../results/index.html"><u>Y</u>our Closet</a>
-						</button>
-						<button class="command_button">
-							<a href="../about-us/index.html"><u>A</u>bout us</a>
-						</button>
+				</nav>
 
-					</nav>
+				<!-- Content -->
+				<hr>
+				<section class="results">
+					<img id="top" class="top" />
+					<img id="pants" class="pants" />
+				</section>
 
-
-
-                    <!-- Content -->
-
-    <hr>
-    <div id="guy" class="guy">
-        <!-- <div id="hat" class="hat"></div> -->
-        <img id="top" class="top" />
-        <img id="pants" class="pants" />
-        <!-- <div id="shoes" class="shoes"></div> -->
-    </div>
-    <button id="randomize" class="submit-button"><u>D</u>ress Me!</button>
-
-		</content>
-		<script type="module" src="./results.js"></script>
-	</body>
+				<section class="button-container">
+				<button id="randomize" class="command_button"><u>D</u>ress Me!</button>
+					</section>
+	</content>
+	<script type="module" src="./results.js"></script>
+</body>
 </html>

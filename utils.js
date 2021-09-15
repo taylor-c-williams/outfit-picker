@@ -25,7 +25,6 @@ export function getSelectedClothing() {
 
 export function getRandomIndex() {
     const selectedArray = getSelectedClothing();
-
     const randomNum = Math.floor(Math.random() * selectedArray.length);
     return randomNum;
 
@@ -36,7 +35,6 @@ export function getRandomClothing() {
     let randomClothing1 = getRandomIndex();
     let randomClothing2 = getRandomIndex();
     let randomClothing3 = getRandomIndex();
-
 
     return [
         data[randomClothing1],
@@ -52,10 +50,8 @@ export function renderItems() {
     // const shoeDiv = document.getElementById('shoes');
     // const randomizeButton = document.getElementById('randomize');
 
-
     const clothingArray = getSelectedClothing();
     console.log(clothingArray);
-
 
     topDiv.src = `../assets/clothes/${clothingArray[0].image}`;
     pantsDiv.src = `../assets/clothes/${clothingArray[1].image}`;
@@ -87,8 +83,6 @@ export function getRandomShirt() {
     });
     const randomIndex = Math.floor(Math.random() * getSelectedShirts.length);
     return getSelectedShirts[randomIndex];
-
-
 }
 
 export function getRandomPants() {
