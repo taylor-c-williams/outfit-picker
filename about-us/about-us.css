@@ -1,3 +1,9 @@
 .about-icons img{
     margin:5px;
 }
+
+.bio-zone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
