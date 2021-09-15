@@ -47,31 +47,12 @@ export function getRandomClothing() {
 export function renderItems() {
     const topDiv = document.getElementById('top');
     const pantsDiv = document.getElementById('pants');
-    // const shoeDiv = document.getElementById('shoes');
-    // const randomizeButton = document.getElementById('randomize');
 
-    const clothingArray = getSelectedClothing();
-    console.log(clothingArray);
+    const randomShirt = getRandomShirt();
+    topDiv.src = `../assets/clothes/${randomShirt.image}`;
 
-    topDiv.src = `../assets/clothes/${clothingArray[0].image}`;
-    pantsDiv.src = `../assets/clothes/${clothingArray[1].image}`;
-    // shoeDiv.src = clothingArray[2].image;
-
-
-    // randomizeButton.addEventListener('click', () => {
-
-    //     const selectedClothing = getSelectedClothing();
-
-    //     getRandomClothing(selectedClothing);
-
-
-
-
-
-    // });
-
-
-
+    const randomPants = getRandomPants();
+    pantsDiv.src = `../assets/clothes/${randomPants.image}`;
 }
 
 export function getRandomShirt() {
