@@ -29,7 +29,7 @@ text-decoration: none;
 
 /* Clothing Form */
 
-form { 
+form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +59,7 @@ a:link{
 }
 
 /* Submit Button */
+
 .choices-submit-button {
     background-color: #dedede;
     display: inline-block;
@@ -94,3 +95,52 @@ a:link{
     justify-content: center;
 }
 
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* Dressing Room Button */
+
+.content .dressing-room-nav {
+    background-color: #dedede;
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-left: 14px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    box-shadow: var(--button-box-shadow);
+}
+.content .dressing-room-nav:hover {
+    box-shadow:
+	var(--button-box-shadow),
+        var(--button-hover-bezel);
+}
+.content .dressing-room-nav:active {
+    color: #fff;
+    background-color: #666;
+    box-shadow:
+	var(--button-hover-bezel),
+	inset -1px -1px 0px 0px #888,
+	inset -2px -2px 0px 0px #777,
+	inset 1px 1px 0px 0px #444,
+	inset 2px 2px 0px 0px #555;
+}
+
+.content .dressing-room-nav-disabled:hover {
+    cursor: not-allowed;
+    } 
+    .content .dressing-room-nav-disabled {
+        cursor: not-allowed;
+        opacity: 30%;
+        color: #000;
+        background-color: #666;
+        margin-bottom: 7px;
+        margin-left: 14px;
+        border-radius: 3px;
+        border: 1px solid #000;
+        box-shadow: var(--button-box-shadow);
+    }
+    
