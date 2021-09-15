@@ -7,16 +7,7 @@
     src: url('../fonts/ChicagoFLF.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-i {
-    font-style: italic;
-}
+/* Header */
 
 nav {
     display: flex;
@@ -36,6 +27,8 @@ text-decoration: none;
     margin:35px;
 }
 
+/* Clothing Form */
+
 form { 
     display: flex;
     justify-content: center;
@@ -43,7 +36,34 @@ form {
     font-size:1.25em;
 }
 
-.submit-button {
+ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul img{
+    height: 30em;
+    margin:10px;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked {
+
+  }
+
+  input:checked + img {
+	border: solid 5px hotpink;
+	border-radius: 5px;
+  }
+
+a:link{
+    text-decoration: none;
+}
+
+/* Submit Button */
+.choices-submit-button {
     background-color: #dedede;
     display: inline-block;
     margin:30px;
@@ -51,12 +71,17 @@ form {
     border: 1px solid #000;
     box-shadow: var(--button-box-shadow);
 }
-.submit-button:hover {
+
+.choices-submit-button:link {
+    text-decoration: none;
+}
+
+.choices-submit-button:hover {
     box-shadow:
 	var(--button-box-shadow),
         var(--button-hover-bezel);
 }
-.submit-button:active {
+.choices-submit-button:active {
     color: #fff;
     background-color: #666;
     box-shadow:
@@ -66,3 +91,10 @@ form {
 	inset 1px 1px 0px 0px #444,
 	inset 2px 2px 0px 0px #555;
 }
+
+.submit-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
