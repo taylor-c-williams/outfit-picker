@@ -1,15 +1,26 @@
-import { renderItems } from '../utils.js';
+import { getRandomColdTops, renderItems } from '../utils.js';
 
 renderItems();
-// getRandomIndex();
-// getRandomShirt();
-// const randomShirt = getRandomShirt();
-// const getRandomNum = getRandomIndex();
-// console.log(randomShirt, getRandomNum);
+
 const randomizeButton = document.getElementById('randomize');
+const coldButton = document.getElementById('coldButton');
+const warmButton = document.getElementById('warmButton');
+
+const coldArray = getRandomColdTops();
+console.log(coldArray);
 
 
 
 randomizeButton.addEventListener('click', () => {
     renderItems();
 });
+
+
+// coldButton.addEventListener('click', () => {
+//     coldClothes();
+// });
+
+
+// warmButton.addEventListener('click', () => {
+//     warmClothes();
+// });
