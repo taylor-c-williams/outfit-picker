@@ -126,11 +126,11 @@ a:link {
 }
 
 .content .dressing-room-nav-disabled:hover {
-	cursor: not-allowed;
+	box-shadow: var(--button-box-shadow), var(--button-hover-bezel);
 }
 
 .content .dressing-room-nav-disabled {
-	cursor: not-allowed;
+	/* cursor: not-allowed; */
 	opacity: 30%;
 	color: #000;
 	background-color: #666;
