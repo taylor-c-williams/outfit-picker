@@ -1,9 +1,3 @@
-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .results {
     display: flex;
     flex-direction: column;
@@ -14,19 +8,19 @@ content {
 }
 
 .results img {
-   width:20em;
-}
-
-.nav button:nth-child(2) {
-    opacity: 0.3;
-    cursor: not-allowed;
+   width: 20em;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px;
+    margin: 40px;
+}
+
+.nav button:nth-child(2) {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 .weather-nav {
@@ -35,7 +29,6 @@ content {
     align-items: center;
     margin:15px;
 }
-
 .weather-nav img {
     height:30px;
     padding:2px;
