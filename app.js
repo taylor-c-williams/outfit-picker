@@ -8,7 +8,6 @@ const toDressingRoomBtn = document.getElementById('choices-submit');
 const homPageToDressingRoom = document.querySelector('.dressing-room-nav-disabled');
 
 
-
 toDressingRoomBtn.addEventListener('click', () => {
 
     const numberOfTops = checkSelectedTops();
@@ -21,6 +20,8 @@ toDressingRoomBtn.addEventListener('click', () => {
     } else window.location = './results';
 }
 );
+
+
 homPageToDressingRoom.addEventListener('click', () => {
 
     const numberOfTops = checkSelectedTops();

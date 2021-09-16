@@ -7,6 +7,11 @@
 	src: url("../fonts/ChicagoFLF.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
+@font-face {
+	font-family: "FindersKeepers";
+	src: url("../fonts/FindersKeepers.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
 /* Header */
 
 nav {
@@ -32,7 +37,8 @@ nav :link,
 
 .instructions {
 	text-align: center;
-	font-size: 1em;
+	font-family: 'FindersKeepers', 'Geneva', sans-serif;
+	font-size: 1.7em;
 	padding: 10px;
     margin-bottom:10px;
 }
@@ -131,9 +137,9 @@ a:link {
 
 .content .dressing-room-nav-disabled {
 	/* cursor: not-allowed; */
-	opacity: 30%;
+	opacity: 0.3;
 	color: #000;
-	background-color: #666;
+	background-color: #dedede;
 	margin-bottom: 7px;
 	margin-left: 14px;
 	border-radius: 3px;
