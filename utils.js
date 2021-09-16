@@ -61,8 +61,6 @@ export function renderItems() {
     pantsDiv.src = `../assets/clothes/${randomPants.image}`;
 }
 
-
-
 export function getRandomColdTops() {
     const selectedClothing = getSelectedClothing();
     const selectedColdShirts = selectedClothing.filter((item) => {
