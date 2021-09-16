@@ -1,5 +1,6 @@
 import { getSelectedClothing } from './utils.js';
 
+
 export function checkSelectedTops() {
     const selectedClothing = getSelectedClothing();
     const getSelectedShirts = selectedClothing.filter((item) => 
@@ -7,6 +8,7 @@ export function checkSelectedTops() {
     );
     return getSelectedShirts.length;
 }
+
 
 export function checkSelectedPants() {
     const selectedClothing = getSelectedClothing();
