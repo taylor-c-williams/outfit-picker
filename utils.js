@@ -1,14 +1,11 @@
 import data from './data.js';
 
-
 const CLOSET = 'CLOSET';
-
 
 export function setClothing(closet) {
     const stringCloset = JSON.stringify(closet);
     localStorage.setItem(CLOSET, stringCloset);
 }
-
 
 export function getClothing() {
     const pullClothing = localStorage.getItem(CLOSET);
@@ -19,13 +16,11 @@ export function getClothing() {
     return parseClothing;
 }
 
-
 export function getSelectedClothing() {
     const clothing = getClothing();
     const selectedClothing = clothing.filter((item) => item.selected);
     return selectedClothing;
 }
-
 
 export function getRandomIndex() {
     const selectedArray = getSelectedClothing();
@@ -33,11 +28,11 @@ export function getRandomIndex() {
     return randomNum;
 }
 
-
 export function getRandomClothing() {
     let randomClothing1 = getRandomIndex();
     let randomClothing2 = getRandomIndex();
     let randomClothing3 = getRandomIndex();
+
     return [
         data[randomClothing1],
         data[randomClothing2],
@@ -45,11 +40,9 @@ export function getRandomClothing() {
     ];
 }
 
-
 export function getRandomShirt() {
     const selectedClothing = getSelectedClothing();
     const getSelectedShirts = selectedClothing.filter((item) => {
-        
         if (item.category === 'top') {
             return item.category;
         }
@@ -58,11 +51,9 @@ export function getRandomShirt() {
     return getSelectedShirts[randomIndex];
 }
 
-
 export function getRandomPants() {
     const clothingSelected = getSelectedClothing();
     const getSelectedPants = clothingSelected.filter((item) => {
-
         if (item.category === 'pants') {
             return item.category;
         }
@@ -70,7 +61,6 @@ export function getRandomPants() {
     const randomIndex = Math.floor(Math.random() * getSelectedPants.length);
     return getSelectedPants[randomIndex];
 }
-
 
 export function renderItems() {
     const topDiv = document.getElementById('top');
