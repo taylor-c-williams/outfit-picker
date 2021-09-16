@@ -4,10 +4,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>C H E R S C L O S E T</title>
-	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
-	<link rel="stylesheet" href="../styles/base.css" />
-	<link rel="stylesheet" href="../styles/style.css" />
-	<link rel="stylesheet" href="./results.css" />
+	<link rel = "shortcut icon" href = "../assets/img/favicon.ico" />
+	<link rel = "stylesheet" href = "../styles/base.css" />
+	<link rel = "stylesheet" href = "../styles/style.css" />
+	<link rel = "stylesheet" href = "./results.css" />
 </head>
 
 <body>
@@ -30,33 +30,46 @@
 			</div>
 
 			<!-- Header -->
-			<h1 class="title">Outfit Picker!</h1>
-			<div class="inner">
-				<div class="icon"><img src="../assets/img/bomb.png" /></div>
+		<h1 class="title">Cher's Wardrobe</h1>
+		<div class="inner">
+			<div class="icon"><img src="../assets/img/bomb.png" /></div>
 
 					<!-- Navigation -->
-					<nav id="nav" class="nav">
-						<button class="command_button">
-							<a href="../index.html"><u>H</u>ome</a>
+					<nav id = "nav" class = "nav">
+						<button class = "command_button">
+							<a href = "../index.html"><u>H</u>ome</a>
 						</button>
-						<button class="dressing-room-nav">
-							<a href="./index.html"><u>D</u>ressing Room</a>
+						<button class = "dressing-room-nav">
+							<a href = "./index.html"><u>D</u>ressing Room</a>
 						</button>
-						<button class="command_button">
-							<a href="../about-us/index.html"><u>A</u>bout us</a>
+						<button class = "command_button">
+							<a href = "../about-us/index.html"><u>A</u>bout us</a>
 						</button>
 					</nav>
+				<hr>
+				
+			<!-- Weather Nav -->
+				<section class = "weather-nav">
+				<button class = "command_button">
+					<a href = ""><img src = "../assets/icons/warmIcon.png" alt = "Sunshine image"></a>
+				</button>
+				<button class="command_button">
+					<a href = ""><img src = "../assets/icons/coldIcon.png" alt = "Rainy day image"></a>
+				</button>
+			</section>
+
+			<section class="button-container">
+				<button id="randomize" class="command_button"><u>C</u>hange Outfit!</button>
+					</section>
 
 				<!-- Content -->
-				<hr>
+
 				<section class="results">
 					<img id="top" class="top" />
 					<img id="pants" class="pants" />
 				</section>
 
-				<section class="button-container">
-				<button id="randomize" class="command_button"><u>D</u>ress Me!</button>
-					</section>
+
 	</content>
 	<script type="module" src="./results.js"></script>
 </body>
