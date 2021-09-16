@@ -1,97 +1,142 @@
-*{
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
 @font-face {
-    font-family: 'ChicagoFLF';
-    src: url('../fonts/ChicagoFLF.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-family: "ChicagoFLF";
+	src: url("../fonts/ChicagoFLF.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
 /* Header */
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-nav :link, :active, :visited {
-text-decoration: none;
+nav :link,
+:active,
+:visited {
+	text-decoration: none;
 }
 
 .subtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:1.5em;
-    margin:35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.3em;
+	margin: 15px;
+}
+
+.instructions {
+	text-align: center;
+	font-size: 1em;
+	padding: 10px;
+    margin-bottom:10px;
 }
 
 /* Clothing Form */
 
-form { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:1.25em;
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.25em;
 }
 
 ul {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
-ul img{
-    height: 30em;
-    margin:10px;
-    cursor:pointer;
+ul img {
+	height: 20em;
+	margin: 10px;
+	cursor: pointer;
 }
 
-  input:checked + img {
+input:checked + img {
 	border: inset 4px #a29fe5;
 	border-radius: 5px;
-  }
+}
 
-a:link{
-    text-decoration: none;
+a:link {
+	text-decoration: none;
 }
 
 /* Submit Button */
+
 .choices-submit-button {
-    background-color: #dedede;
-    display: inline-block;
-    margin:30px;
-    border-radius: 3px;
-    border: 1px solid #000;
-    box-shadow: var(--button-box-shadow);
+	background-color: #dedede;
+	display: inline-block;
+	margin: 30px;
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: var(--button-box-shadow);
 }
 
 .choices-submit-button:link {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .choices-submit-button:hover {
-    box-shadow:
-	var(--button-box-shadow),
-        var(--button-hover-bezel);
+	box-shadow: var(--button-box-shadow), var(--button-hover-bezel);
 }
 
 .choices-submit-button:active {
-    color: #fff;
-    background-color: #666;
-    box-shadow:
-	var(--button-hover-bezel),
-	inset -1px -1px 0px 0px #888,
-	inset -2px -2px 0px 0px #777,
-	inset 1px 1px 0px 0px #444,
-	inset 2px 2px 0px 0px #555;
+	color: #fff;
+	background-color: #666;
+	box-shadow: var(--button-hover-bezel), inset -1px -1px 0px 0px #888,
+		inset -2px -2px 0px 0px #777, inset 1px 1px 0px 0px #444,
+		inset 2px 2px 0px 0px #555;
 }
 
-.submit-button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.submit-button-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+/* Dressing Room Button */
+
+.content .dressing-room-nav {
+	background-color: #dedede;
+	display: inline-block;
+	margin-bottom: 7px;
+	margin-left: 14px;
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: var(--button-box-shadow);
+}
+
+.content .dressing-room-nav:hover {
+	box-shadow: var(--button-box-shadow), var(--button-hover-bezel);
+}
+
+.content .dressing-room-nav:active {
+	color: #fff;
+	background-color: #666;
+	box-shadow: var(--button-hover-bezel), inset -1px -1px 0px 0px #888,
+		inset -2px -2px 0px 0px #777, inset 1px 1px 0px 0px #444,
+		inset 2px 2px 0px 0px #555;
+}
+
+.content .dressing-room-nav-disabled:hover {
+	box-shadow: var(--button-box-shadow), var(--button-hover-bezel);
+}
+
+.content .dressing-room-nav-disabled {
+	cursor: not-allowed;
+	opacity: 30%;
+	color: #000;
+	background-color: #666;
+	margin-bottom: 7px;
+	margin-left: 14px;
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: var(--button-box-shadow);
+}

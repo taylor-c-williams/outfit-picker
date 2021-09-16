@@ -1,0 +1,30 @@
+
+			<!-- Mac '87 Window Layout -->
+			<div id = "content" class = "content">
+				<div class = "control-box close-box">
+					<a class = "control-box-inner"></a>
+				</div>
+				<div class = "control-box zoom-box">
+					<div class = "control-box-inner">
+						<div class = "zoom-box-inner"></div>
+					</div>
+				</div>
+				<div class = "control-box windowshade-box">
+					<div class = "control-box-inner">
+						<div class = "windowshade-box-inner"></div>
+					</div>
+				</div>
+
+				<!-- Header -->
+				<h1 class = "title">Outfit Picker!</h1>
+				<div class = "inner">
+
+
+					<!-- Content  -->
+				</div>
+			</div>
+            
+		</content>
+		<script type = "module" src = "./app.js"></script>
+	</body>
+</html>

@@ -13,7 +13,7 @@ export function populateTops() {
     // grab all tops from local storage
 
     const tops = clothingArray.filter((oneClothing) => {
-        
+
         if (oneClothing.category === 'top') {
             return oneClothing.category;
         }
