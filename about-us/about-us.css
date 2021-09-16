@@ -2,15 +2,6 @@
     height: 35px;
 }
 
-.nav button:nth-child(3) {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-/* .bios * {
-    border: solid pink 1px;
-} */
-
 .bios {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -44,13 +35,6 @@ section img {
     text-align: left;
 }
 
-/* .bio-zone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
 .box {
     width: 40%;
     margin: 0 auto;
@@ -65,7 +49,6 @@ section img {
   .button {
     text-decoration: none;
     cursor: pointer;
-
   }
 
   .button:hover {
