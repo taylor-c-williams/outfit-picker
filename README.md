@@ -1,215 +1,123 @@
+# Project 
+## Specifics
+* Project name: Cher's Wardrobe
+* Team members: Taylor, Julius, Marvin, Karl
+* Description: Allows user to select a number of tops and skirts/shorts. Once done with selections, will take user to a page that randomly generates an amazing outfit to wear based on the items picked.
+(GUARANTEED YOU WILL LOOK 2% BETTER AT MOST)
+* Problem to solve for user: 
+  * Cant decide outfit
+  * Late to school
+  * Have to try on several outfits before deciding
+* Solution: 
+  * save time
+  * helps you decide
+  * helps you compare
+  * sleep in longer
+  * organize wardrobe
+
 ## Making a plan
-1) Make a drawing of your app. Simple "wireframes"
+1. Make a drawing of your app. Simple "wireframes"
+    * wireframes in miro board at https://miro.com/app/board/o9J_lxPyAAA=/
+
 2) Once you have a drawing, name the HTML elements you'll need to realize your vision
 
-PG ONE 
-------
-- div for title and for instructions
-- FORM: -- event listeners on images, submit button
-- grid element (divs, spans) with images ===> shirt, pants, etc
+### All Pages 
+* elements for *Mac '87 Window Layout* styling
+* `<nav> ` for navigating through pages
+  * home / dressing room / about us
+* `<section> ` for page title
 
-- Styling to show status of STATE ==> picked true / fals
+### Page One
+* `<section> ` for instructions
+* `<section> ` for each clothing category
+* `<ul> ` for dynamically inserting images 
+* `<button> ` to add event listener for checking minimum
+nummber of choices for each category and to take user to *Dressing Room* page 
 
+### Page Two
+* `<section> ` constainer for results of randomized tops/skirts/shorts
+* `<img> ` to insert results
+* `<button> ` to get another randomized result
+  * Randomize clothing images/IDs w math.random
+  * Display randomized outfit- inject clothes images
 
-- button >>> disabled until min reqs met
-- === at least 2 pix per category ?
-    JSON some data -- picked = true
-    directs to page 2
-    
-    
-PG TWO
--------
-- DRESS YO'SELF
-- Section 
-  -for guy in underwear = background img
-  - divs to inject clothing items: hat, shirt, pants, shoes etc -- defined/same sizes 
-    -- Stretch: display picks
-    
-- RANDOMIZE BUTTON >>
-    - Randomize clothing images/IDs w math.random
-    - Display randomized outfit- inject clothes images 
-    
-
-- Back button = edit choices, directs to pg 1
+### Page Three
+* `<div> ` to hold "fun" icons
+* `<section> ` for bios
+  * `<section> ` for ` <img> ` and ` <p> ` to hold each team member's info.
 
 
-PG THREE - About Marvin
-----
-- pictures of us in crazy outfits / superimposed Cher's yellow plaid outfit (!! <3 ) 
-- Bio - we are developers who live online
-DIV: Images
-DIV: bio 
-- Grid
+## TASKS:
+* Write Copy
+* design data structure
+* Assets (!!)
+* Grids 
+  * Maybe a template? 
+* Layout template?
+  * 3 button nav: about us, edit choices, randomize outfit, nav bar design 
 
+## EVENT LISTENERS
+* Page 1: check selections, navigate to results, alerts if min selections not met.
+* Page 1: toggles local storage selectected status
+* Page 2: randomize results, populate new images
 
-TASKS:
--- Write Copy
--- design data structure
--- Assets (!!)
--- Grids -- Maybe a template? 
--- Layout template? --- 3 button nav: about us, edit choices, randomize outfit, nav bar design 
-
-
--- Minimum choice requirements? 
-
-
-[[ EDIT CHOICES || RANDOMIZE OUTIFT || ABOUT US ]]
-    TITLE
-   DIRECTIONS
-
-----GRID
-
-
-4) For each HTML element ask: Why do I need this?
-
-6) Once we know _why_ we need each element, think about how to implement the "Why" as a "How"
-
-EVENT LISTENERS >>>> 
-  PG 1 / Randomize
-  PG 2 / Edit
-
-8) Is there some state we need to initialize?
- Dataset --- 
-  Item ID
-  item image
-  Picked = true/false >> How many
-  category/type
+## Dataset
+* Item ID
+* name
+* image
+* Selected = true/false
+* category/type
   
-  
-10) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?
 
-Button is disabled until minimum choice requirements are passed 
->>> Alert! You need more shirts!
-Picked = true / false
-Randomize picked items
-inject/populate 
+## Functions tested
 
-Grid items/images = checkboxes w event listeners
+* get function test
+* set function test
+* switch select test
 
-12) Think about how to validate each of your steps
+## STRETCH GOALS
 
+* Weather-specific choices
+  * add to dataset  
+* Clothing styles
+  * Randomize / Edit single clothing items
+* Week's worth of outfits / M-F M-S 
+* Save favorite outfit combos
+  * Set current outfit as an arrays
+* Career outfits ie cop firefighter
 
+## Misc notes:
 
+### FILE STRUCTURE
+* Landing/Splash = index
+* Results
+  * HTML
+  * CSS
+  * JS
+* ABOUT US
+  * HTML
+  * CSS 
+  * JS 
 
-Test 3 different functions:
+### FILE NAMING CONVENTIONS -
+* Bring it up in slack/zoom
+* Kabob for filenames
+* Camel for JS
+* Pluralize? 
 
-- RANDOMIZE
- math.random x chosen array length
- displayed item = random index number
- inject random index item/image into outfit page
- 
- (images live in dataset)
+**Comment Driven Development!**
 
+### DAILY WORKFLOW:
+* Meet at 9am (Beginning of day) check in, go over challenges, achievements, check in
+* Huddle before lunch (10 min before lunch) 11:50 
+* 3pm (2 hr after lunch)
+* other
+  * Call a huddle if you need?
+  * Class time working hours
+  * Not immediate urgency: Slack 
+  * URGENT - zoom
 
-
-- CHOOSE item <= lives on checkbox event listener
- >>> array.filter = items that are picked, save to const
- >>> const pickedClothes = array.filter.picked
- >>> if (pickedClothes < 3 [minimum]){
- >>> alert('PICK MORE!')
- >>> Else { window.location = outfits} 
- 
- -- changes picked = true
- -- creates new array of picked items (.push)
- 
- 
- - RENDER
-inject items/assets into page 2 based on picked items array
-
-SUBMIT BUTTON : 
-check if pickedItems < 3
-then disable submit button
-
-
-14) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-15) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
-
-const shirtPicks = shirts.true;
-
-if (shirtPiccks < 3){
-button = disabled,
-alert('pick more!!')}
-else {window.location = outfits}
-
->>> Array .filter >>> all shirts that picked = true, save to const
-
-
-STRETCH GOALS
-
-- Weather
-    - add to dataset
-   
-- Clothing styles
-- * Randomize / Edit single clothing items
-- * Week's worth of outfits / M-F M-S 
--       - Save favorite outfit combos
--       - Set current outfit as an arrays
-- Career outfits ie cop firefighter
-
-MVP
-- clothing colors
-
-
-
-README:
-- Name of Project:
--   Miss Match
--   Dress yo'self
--   MISMATCH
--   
-- names of team members
- - ---* co co hollywood *---
- - karl (pretty out there)
- - taylor
- - Julius 
--   
-- description of proj
--       GUARANTEED YOU WILL LOOK 2% BETTER AT MOST
--       
-- What is our problem? I cant decide which outfit blah blahb
--       --- solution:: outfit rando
--       
--  Attribute credit where is due 
-
-
-FILE STRUCTURE
-- Landing/Splash = index
-- Results -
--      - HTML
--      - CSS
--      - JS
-- ABOUT US -
--       - HTML
--       - CSS 
--       - JS 
-
-FILE NAMING CONVENTIONS -
-- Bring it up in slack/zoom
-- Kabob for filenames
-- Camel for JS
-- Pluralize? 
-
-==>>> Comment Driven Development
-
-DAILY WORKFLOW:
-- Meet at 9am (Beginning of day) check in, go over challenges, achievements, check in
-- Huddle before lunch (10 min before lunch) 11:50 
-- 3pm (2 hr after lunch)
-
-- Call a huddle if you need?
-
-- Class time working hours
--  Not immediate urgency: Slack 
--  URGENT - zoom
-
-- TESTING -
-- Picked/chosen item - Pure
-- Randomize --- IMPURE!!! 
-- Render - Pure
-
-
-ATTRIBUTION 
-----
+## ATTRIBUTION 
 ChicagoFLF font by Robin Casady (Casady & Greene) - (Public Domain)
 http://moorstation.org/typoasis/designers/casady_greene/index.htm
 
