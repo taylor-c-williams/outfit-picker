@@ -28,18 +28,6 @@ export function getRandomIndex() {
     return randomNum;
 }
 
-export function getRandomClothing() {
-    let randomClothing1 = getRandomIndex();
-    let randomClothing2 = getRandomIndex();
-    let randomClothing3 = getRandomIndex();
-
-    return [
-        data[randomClothing1],
-        data[randomClothing2],
-        data[randomClothing3]
-    ];
-}
-
 export function getRandomShirt() {
     const selectedClothing = getSelectedClothing();
     const getSelectedShirts = selectedClothing.filter((item) => {
@@ -75,34 +63,6 @@ export function renderItems() {
 
 
 
-
-
-
-
-// PULLING WARM AND COLD APPROPRIATE CLOTHING
-
-// export function getWarmClothes() {
-//     const warmClothes = getSelectedClothing();
-//     const warmSelection = warmClothes.filter((item) => {
-//         if (item.weather === 'warm') {
-//             return item.weather;
-//         }
-//     });
-//     return warmSelection;
-// }
-
-
-// export function getColdClothes() {
-//     const coldClothes = getSelectedClothing();
-//     const coldSelection = coldClothes.filter((item) => {
-//         if (item.weather === 'cold') {
-//             return item.weather;
-//         }
-//     });
-//     return coldSelection;
-// }
-
-// RENDERING COLD TOPS & BOTTOMS
 export function getRandomColdTops() {
     const selectedClothing = getSelectedClothing();
     const selectedColdShirts = selectedClothing.filter((item) => {
@@ -115,80 +75,65 @@ export function getRandomColdTops() {
     return selectedColdShirts[randomIndex];
 }
 
+export function getRandomColdBottoms() {
+    const selectedClothing = getSelectedClothing();
+    const selectedColdBottoms = selectedClothing.filter((item) => {
+        if (item.category === 'pants' && item.weather === 'cold') {
+
+            return item;
+        }
+    });
+    const randomIndex = Math.floor(Math.random() * selectedColdBottoms.length);
+    return selectedColdBottoms[randomIndex];
+}
+
+export function getRandomWarmTops() {
+    const selectedClothing = getSelectedClothing();
+    const selectedWarmShirts = selectedClothing.filter((item) => {
+        if (item.category === 'top' && item.weather === 'warm') {
+
+            return item;
+        }
+    });
+    const randomIndex = Math.floor(Math.random() * selectedWarmShirts.length);
+    return selectedWarmShirts[randomIndex];
+}
+
+export function getRandomWarmBottoms() {
+    const selectedWarmPants = getSelectedClothing();
+    const selectedWarmBottoms = selectedWarmPants.filter((item) => {
+        if (item.category === 'pants' && item.weather === 'warm') {
+
+            return item;
+        }
+
+    });
+    const randomIndex = Math.floor(Math.random() * selectedWarmBottoms.length);
+    return selectedWarmBottoms[randomIndex];
+}
 
 
 
-        // const pullColdTops = coldTops.filter((item) => {
-            //     if (item.weather === 'cold') {
-            //         return item.weather;
-            //     }
-            //     });
-            // return pullColdTops;
+export function warmClothes() {
+    const topImg = document.getElementById('top');
+    const pantsImg = document.getElementById('pants');
 
+    const warmTops = getRandomWarmTops();
+    topImg.src = `../assets/clothes/${warmTops.image}`;
 
-// export function renderColdTops() {
-//     const coldTops = getColdClothes();
-//     const pullColdTops = coldTops.filter((item) => {
-//         if (item.category === 'top')
-//             return item.category;
-//     });
-//     const randomIndex = Math.floor(Math.random() * pullColdTops.length);
-//     return pullColdTops[randomIndex];
-// }
+    const warmPants = getRandomWarmBottoms();
+    console.log(warmPants);
+    pantsImg.src = `../assets/clothes/${warmPants.image}`;
+}
 
-// export function renderColdBottoms() {
-//     const coldPants = getColdClothes();
-//     const pullColdPants = coldPants.filter((item) => {
-//         if (item.category === 'pants') {
-//             return item.category;
-//         }
-//     });
-//     const randomIndex = Math.floor(Math.random() * pullColdPants.length);
-//     return pullColdPants[randomIndex];
-// }
+export function coldClothes() {
+    const topImg = document.getElementById('top');
+    const bottomImg = document.getElementById('pants');
+    console.log(topImg);
 
-// // RENDERING WARM TOPS & BOTTOMS
-
-// export function renderWarmTops() {
-//     const warmTops = getWarmClothes();
-//     const pullWarmTops = warmTops.filter((item) => {
-//         if (item.category === 'top') {
-//             return item.category;
-//         }
-//     });
-//     const randomIndex = Math.floor(Math.random() * pullWarmTops.length);
-//     return pullWarmTops[randomIndex];
-// }
-
-// export function renderWarmBottoms() {
-//     const warmBottoms = getWarmClothes();
-//     const pullWarmBottoms = warmBottoms.filter((item) => {
-//         if (item.category === 'pants') {
-//             return item.category;
-//         }
-//     });
-//     const randomIndex = Math.floor(Math.random() * pullWarmBottoms.length);
-//     return pullWarmBottoms[randomIndex];
-// }
-
-// export function warmClothes() {
-//     const topDiv = document.getElementById('top');
-//     const pantsDiv = document.getElementById('pants');
-
-//     const warmTops = renderWarmTops();
-//     topDiv.src = `../assets/clothes/${warmTops.image}`;
-
-//     const warmPants = renderWarmBottoms();
-//     pantsDiv.src = `../assets/clothes/${warmPants.image}`;
-// }
-
-// export function coldClothes() {
-//     const topDiv = document.getElementById('top');
-//     const pantsDiv = document.getElementById('pants');
-
-//     const coldTops = renderColdTops();
-//     topDiv.src = `../assets/clothes/${coldTops.image}`;
-
-//     const coldPants = renderColdBottoms();
-//     pantsDiv.src = `../assets/clothes/${coldPants.image}`;
-//
+    const coldTops = getRandomColdTops();
+    console.log(coldTops);
+    topImg.src = `../assets/clothes/${coldTops.image}`;
+    const coldBottoms = getRandomColdBottoms();
+    bottomImg.src = `../assets/clothes/${coldBottoms.image}`;
+}
