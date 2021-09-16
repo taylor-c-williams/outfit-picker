@@ -10,6 +10,11 @@
    width:25em;
 }
 
+.nav button:nth-child(2) {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
