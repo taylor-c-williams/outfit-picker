@@ -34,43 +34,45 @@
 		<div class="inner">
 			<div class="icon"><img src="../assets/img/bomb.png" /></div>
 
-					<!-- Navigation -->
-					<nav id = "nav" class = "nav">
-						<button class = "command_button">
-							<a href = "../index.html"><u>H</u>ome</a>
-						</button>
-						<button class = "dressing-room-nav">
-							<a href = "./index.html"><u>D</u>ressing Room</a>
-						</button>
-						<button class = "command_button">
-							<a href = "../about-us/index.html"><u>A</u>bout us</a>
-						</button>
-					</nav>
-				<hr>
-				
-			<!-- Weather Nav -->
-				<section class = "weather-nav">
-				<button class = "command_button">
-					<a href = ""><img src = "../assets/icons/warmIcon.png" alt = "Sunshine image"></a>
-				</button>
-				<button class="command_button">
-					<a href = ""><img src = "../assets/icons/coldIcon.png" alt = "Rainy day image"></a>
-				</button>
-			</section>
 
-			<section class="button-container">
-				<button id="randomize" class="command_button"><u>C</u>hange Outfit!</button>
-					</section>
+				<!-- Navigation -->
+				<nav id="nav" class="nav">
+					<button class="command_button">
+						<a href="../index.html"><u>H</u>ome</a>
+					</button>
+					<button class="dressing-room-nav">
+						<a href="./index.html"><u>D</u>ressing Room</a>
+					</button>
+					<button class="command_button">
+						<a href="../about-us/index.html"><u>A</u>bout us</a>
+					</button>
+				</nav>
 
 				<!-- Content -->
+				<hr>
+
+				<!-- Weather Nav -->
+				<section class="weather-nav">
+					<button class="command_button" id="warmButton">
+						<img src="../assets/icons/warmIcon.png">
+					</button>
+					<button class="command_button" id="coldButton">
+						<img src="../assets/icons/coldIcon.png">
+					</button>
+				</section>
+				<!-- Outfits -->
 
 				<section class="results">
 					<img id="top" class="top" />
 					<img id="pants" class="pants" />
 				</section>
 
+				<section class="button-container">
+					<button id="randomize" class="command_button"><u>D</u>ress Me!</button>
+				</section>
 
 	</content>
 	<script type="module" src="./results.js"></script>
 </body>
+
 </html>

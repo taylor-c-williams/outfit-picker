@@ -28,18 +28,6 @@ export function getRandomIndex() {
     return randomNum;
 }
 
-export function getRandomClothing() {
-    let randomClothing1 = getRandomIndex();
-    let randomClothing2 = getRandomIndex();
-    let randomClothing3 = getRandomIndex();
-
-    return [
-        data[randomClothing1],
-        data[randomClothing2],
-        data[randomClothing3]
-    ];
-}
-
 export function getRandomShirt() {
     const selectedClothing = getSelectedClothing();
     const getSelectedShirts = selectedClothing.filter((item) => {
@@ -71,4 +59,81 @@ export function renderItems() {
 
     const randomPants = getRandomPants();
     pantsDiv.src = `../assets/clothes/${randomPants.image}`;
+}
+
+
+
+export function getRandomColdTops() {
+    const selectedClothing = getSelectedClothing();
+    const selectedColdShirts = selectedClothing.filter((item) => {
+        if (item.category === 'top' && item.weather === 'cold') {
+
+            return item;
+        }
+    });
+    const randomIndex = Math.floor(Math.random() * selectedColdShirts.length);
+    return selectedColdShirts[randomIndex];
+}
+
+export function getRandomColdBottoms() {
+    const selectedClothing = getSelectedClothing();
+    const selectedColdBottoms = selectedClothing.filter((item) => {
+        if (item.category === 'pants' && item.weather === 'cold') {
+
+            return item;
+        }
+    });
+    const randomIndex = Math.floor(Math.random() * selectedColdBottoms.length);
+    return selectedColdBottoms[randomIndex];
+}
+
+export function getRandomWarmTops() {
+    const selectedClothing = getSelectedClothing();
+    const selectedWarmShirts = selectedClothing.filter((item) => {
+        if (item.category === 'top' && item.weather === 'warm') {
+
+            return item;
+        }
+    });
+    const randomIndex = Math.floor(Math.random() * selectedWarmShirts.length);
+    return selectedWarmShirts[randomIndex];
+}
+
+export function getRandomWarmBottoms() {
+    const selectedWarmPants = getSelectedClothing();
+    const selectedWarmBottoms = selectedWarmPants.filter((item) => {
+        if (item.category === 'pants' && item.weather === 'warm') {
+
+            return item;
+        }
+
+    });
+    const randomIndex = Math.floor(Math.random() * selectedWarmBottoms.length);
+    return selectedWarmBottoms[randomIndex];
+}
+
+
+
+export function warmClothes() {
+    const topImg = document.getElementById('top');
+    const pantsImg = document.getElementById('pants');
+
+    const warmTops = getRandomWarmTops();
+    topImg.src = `../assets/clothes/${warmTops.image}`;
+
+    const warmPants = getRandomWarmBottoms();
+    console.log(warmPants);
+    pantsImg.src = `../assets/clothes/${warmPants.image}`;
+}
+
+export function coldClothes() {
+    const topImg = document.getElementById('top');
+    const bottomImg = document.getElementById('pants');
+    console.log(topImg);
+
+    const coldTops = getRandomColdTops();
+    console.log(coldTops);
+    topImg.src = `../assets/clothes/${coldTops.image}`;
+    const coldBottoms = getRandomColdBottoms();
+    bottomImg.src = `../assets/clothes/${coldBottoms.image}`;
 }
