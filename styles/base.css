@@ -43,9 +43,11 @@ button {
     font-size: inherit;
     color: inherit;
 }
+
 a {
     color: #000;
 }
+
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
 
@@ -64,6 +66,7 @@ a {
 	inset -1px -1px 0px 0px #999;
     overflow-x: auto;
 }
+
 .content .inner {
     margin: 2px 4px 4px 4px;
     border: 1px solid #111;
@@ -74,6 +77,7 @@ a {
 	inset 1px 1px 0px 0px #fff,
 	inset -1px -1px 0px 0px #999;
 }
+
 .title {
     width: 100%;
     text-align: center;
@@ -83,22 +87,26 @@ a {
     background-size: 3px 2px;
     margin: 0 0 0 0;
 }
+
 .content .icon {
     text-align: center;
     margin: 1em 0;
 }
+
 .content ul {
     list-style-type: none;
     margin: 2px 0 1.5em 0;
     padding: 0 0 0 2em;
     font-size: 12px;
 }
+
 .footer {
     width: 400px;
     text-align: center;
     margin: 2em auto 0;
     font-size: 12px;
 }
+
 .control-box {
     position: absolute;
     top: 3px;
@@ -108,9 +116,11 @@ a {
 	inset -1px -1px 0px 0px #fff,
 	inset 1px 1px 0px 0px #888;
 }
+
 .close-box.control-box {
     left: 4px;
 }
+
 .control-box-inner {
     display: block;        
     height: 12px;
@@ -123,27 +133,33 @@ a {
 	inset -1px -1px 0px 0px #888;
     text-indent: -99999em;
 }
+
 .control-box-inner:active {
     box-shadow: none;
 }
+
 .zoom-box.control-box {
     right: 20px;
 }
+
 .zoom-box-inner {
     height: 6px;
     width: 7px;
     border-bottom: 1px solid #000;
     border-right: 1px solid #000;
 }
+
 .windowshade-box.control-box {
     right: 4px;
 }
+
 .windowshade-box-inner {
     margin-top: 3px;
     height: 3px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
+
 .content .command_button {
     background-color: #dedede;
     display: inline-block;
@@ -153,11 +169,13 @@ a {
     border: 1px solid #000;
     box-shadow: var(--button-box-shadow);
 }
+
 .content .command_button:hover {
     box-shadow:
 	var(--button-box-shadow),
         var(--button-hover-bezel);
 }
+
 .content .command_button:active {
     color: #fff;
     background-color: #666;
@@ -168,6 +186,7 @@ a {
 	inset 1px 1px 0px 0px #444,
 	inset 2px 2px 0px 0px #555;
 }
+
 /* Hide only visually, but have it available for screenreaders & for SEO purposes. See h5bp.com/v */
 .visuallyhidden {
     border: 0;
