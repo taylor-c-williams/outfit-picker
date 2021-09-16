@@ -16,15 +16,3 @@
     align-items: center;
     margin: 40px;
 }
-
-.weather-nav {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin:15px;
-}
-
-.weather-nav img {
-    height:30px;
-    padding:2px;
-}
