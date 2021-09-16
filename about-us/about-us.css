@@ -95,7 +95,7 @@ section img {
     padding: 30px;
     background: #fff;
     border-radius: 5px;
-    width: 55%;
+    width: 50%;
     position: relative;
 
   }
@@ -108,7 +108,7 @@ section img {
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: hotpink;
   }
   .popup .close:hover {
     color: #06D85F;
