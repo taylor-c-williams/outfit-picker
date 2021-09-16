@@ -4,6 +4,7 @@
 
 .nav button:nth-child(3) {
     opacity: 0.3;
+    cursor: not-allowed;
 }
 
 /* .bios * {
@@ -15,6 +16,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 100%;
     margin: 30px;
+    overflow-x: auto;
 }
 
 section img {

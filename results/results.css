@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     padding-top:25px;
+    padding-bottom:25px;
 }
 
 .results img {
-   width:25em;
+   width: 20em;
 }
 
 .button-container {
@@ -17,13 +18,17 @@
     margin: 40px;
 }
 
+.nav button:nth-child(2) {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 .weather-nav {
     display:flex;
     justify-content: center;
     align-items: center;
     margin:15px;
 }
-
 .weather-nav img {
     height:30px;
     padding:2px;
