@@ -70,6 +70,11 @@ input:checked + img {
 	border-radius: 5px;
 }
 
+input:hover + img {
+	border: inset 4px #a29fe5;
+	border-radius: 5px;
+}
+
 a:link {
 	text-decoration: none;
 }

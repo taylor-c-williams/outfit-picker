@@ -13,9 +13,9 @@ toDressingRoomBtn.addEventListener('click', () => {
     const numberOfTops = checkSelectedTops();
     const numberOfPants = checkSelectedPants();
 
-    if (numberOfTops < 3) {
+    if (numberOfTops < 4) {
         alert('AS IF you can look fly without picking more tops!');
-    } else if (numberOfPants < 3) {
+    } else if (numberOfPants < 4) {
         alert('You picked enough skirts/shorts... not!');
     } else window.location = './results';
 }
@@ -27,9 +27,9 @@ homPageToDressingRoom.addEventListener('click', () => {
     const numberOfTops = checkSelectedTops();
     const numberOfPants = checkSelectedPants();
 
-    if (numberOfTops < 3) {
+    if (numberOfTops < 4) {
         alert('AS IF you can look fly without picking more tops!');
-    } else if (numberOfPants < 3) {
+    } else if (numberOfPants < 4) {
         alert('You picked enough skirts/shorts... not!');
     } else window.location = './results';
 }
