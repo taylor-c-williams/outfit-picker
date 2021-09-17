@@ -1,9 +1,7 @@
 import { switchSelected } from './switch-selected.js';
 
 // itemsArray needs to be coming from local storage!
-
 export function renderClothingItems(itemsArray, ulToPopulate) {
-
     for (let item of itemsArray) {
 
 // create a li to hold the button image and button
@@ -22,6 +20,7 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
 
 // add event listener with switch-select function to checkbox
         img.addEventListener('click', () => switchSelected(item.id));
+        
 // append image & checkbox to label
         label.append(switchCheck, img);
         li.append(label);
