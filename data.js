@@ -1,32 +1,21 @@
 export default [
-    // {
-    //     name:'hat-1',
-    //     id: 1,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'hat',
-    // },
-    // {
-    //     name:'hat-2',
-    //     id: 2,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'hat',
-    // },
-    // {
-    //     name:'hat-3',
-    //     id: 3,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'hat',
-    // },
-    // {
-    //     name:'hat-4',
-    //     id: 4,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'hat',
-    // },
+
+    {
+        name: 'top-12',
+        id: 3,
+        image: 'tops12.jpg',
+        selected: false,
+        category: 'top',
+        weather: 'warm',
+    },
+    {
+        name: 'top-11',
+        id: 4,
+        image: 'tops11.jpg',
+        selected: false,
+        category: 'top',
+        weather: 'cold',
+    },
     {
         name: 'top-1',
         id: 5,
@@ -186,33 +175,22 @@ export default [
         selected: false,
         category: 'pants',
         weather: 'warm',
+    },
+    {
+        name: 'pants-11',
+        id: 25,
+        image: 'bottoms11.jpg',
+        selected: false,
+        category: 'pants',
+        weather: 'cold',
+    },
+    {
+        name: 'pants-12',
+        id: 26,
+        image: 'bottoms12.jpg',
+        selected: false,
+        category: 'pants',
+        weather: 'warm',
     }
-    // {
-    //     name:'shoes-1',
-    //     id: ,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'shoes',
-    // },
-    // {
-    //     name:'shoes-2',
-    //     id: ,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'shoes',
-    // },
-    // {
-    //     name:'shoes-3',
-    //     id: ,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'shoes',
-    // },
-    // {
-    //     name:'shoes-4',
-    //     id: ,
-    //     image: 'hanger.png',
-    //     selected: false,
-    //     category: 'shoes',
-    // }
+
 ];
