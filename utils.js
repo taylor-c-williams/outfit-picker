@@ -105,8 +105,6 @@ export function getRandomWarmBottoms() {
     return selectedWarmBottoms[randomIndex];
 }
 
-
-
 export function warmClothes() {
     const topImg = document.getElementById('top');
     const pantsImg = document.getElementById('pants');

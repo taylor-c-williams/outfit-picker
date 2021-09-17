@@ -192,5 +192,4 @@ export default [
         category: 'pants',
         weather: 'warm',
     }
-
 ];

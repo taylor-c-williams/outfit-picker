@@ -96,6 +96,7 @@ a:link {
 
 .choices-submit-button:hover {
 	box-shadow: var(--button-box-shadow), var(--button-hover-bezel);
+	cursor: pointer;
 }
 
 .choices-submit-button:active {

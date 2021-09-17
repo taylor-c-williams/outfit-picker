@@ -7,10 +7,6 @@
     padding-bottom: 25px;
 }
 
-* {
-    /* border:deeppink 1px solid; */
-}
-
 .results img {
    width: 20em;
 }
@@ -31,6 +27,10 @@
     align-items: center;
 }
 
+#warmButton:hover {
+    cursor: pointer;
+}
+
 #warmButton img {
     height:25px;
     padding: 2px;
@@ -41,7 +41,15 @@
     align-items: center;
 }
 
+#coldButton {
+    cursor: pointer;
+}
+
 #coldButton img {
     height:25px;
     padding:2px;
+}
+
+#randomize {
+    cursor: pointer;
 }
