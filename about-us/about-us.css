@@ -2,11 +2,6 @@
     height: 35px;
 }
 
-.nav button:nth-child(3) {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
 .bios {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
