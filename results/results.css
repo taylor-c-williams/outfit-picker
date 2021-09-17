@@ -7,16 +7,20 @@
     padding-bottom:25px;
 }
 
+* {
+    /* border:deeppink 1px solid; */
+}
+
 .results img {
    width: 20em;
 }
 
-.button-container {
+/* .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px;
-}
+} */
 
 .nav button:nth-child(2) {
     opacity: 0.3;
@@ -26,8 +30,8 @@
 .weather-nav {
     display:flex;
     justify-content: center;
-    align-items: center;
-    margin:15px;
+    /* align-content: center; */
+    margin-top: 45px;
 }
 .weather-nav img {
     height:30px;
