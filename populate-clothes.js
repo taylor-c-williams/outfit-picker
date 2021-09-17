@@ -1,7 +1,6 @@
 import { renderClothingItems } from './create-elements.js';
 import { getClothing } from './utils.js';
 
-
 //grab ul element for tops
 const topUl = document.getElementById('tops-choices');
 
@@ -21,6 +20,7 @@ const pantsUl = document.getElementById('pants-choices');
 
 export function populatePants() {
     const clothingArray = getClothing();
+
     // grab all pants from local storage
     const pants = clothingArray.filter((oneClothing) => {
         if (oneClothing.category === 'pants') {
