@@ -22,32 +22,47 @@ export function getSelectedClothing() {
     return selectedClothing;
 }
 
-export function getRandomIndex() {
-    const selectedArray = getSelectedClothing();
-    const randomNum = Math.floor(Math.random() * selectedArray.length);
-    return randomNum;
+export function getRandomIndex(arr) {
+    return Math.floor(Math.random() * arr.length);
+}
+
+// could abstract this down into a function that filters by multiple categories
+function getRandomItemByTypes(type, weatherType) {
+    const selectedClothing = getSelectedClothing();
+    const filteredItems = selectedClothing.filter((item) => 
+    // if a weather is supplied, filter by type AND weather
+        weatherType 
+    // otherwise, just filter by type, since no weather is supplied
+            ? item.category === type && item.weather === weatherType 
+            : item.category === type
+    );
+
+    return filteredItems[getRandomIndex(filteredItems)];
+
 }
 
 export function getRandomShirt() {
-    const selectedClothing = getSelectedClothing();
-    const getSelectedShirts = selectedClothing.filter((item) => {
-        if (item.category === 'top') {
-            return item.category;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * getSelectedShirts.length);
-    return getSelectedShirts[randomIndex];
+    return getRandomItemByTypes('shirt');
 }
 
 export function getRandomPants() {
-    const clothingSelected = getSelectedClothing();
-    const getSelectedPants = clothingSelected.filter((item) => {
-        if (item.category === 'pants') {
-            return item.category;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * getSelectedPants.length);
-    return getSelectedPants[randomIndex];
+    return getRandomItemByTypes('pants');
+}
+
+export function getRandomColdTops() {
+    return getRandomItemByTypes('top', 'cold');
+}
+
+export function getRandomColdBottoms() {
+    return getRandomItemByTypes('bottoms', 'cold');
+}
+
+export function getRandomWarmTops() {
+    return getRandomItemByTypes('top', 'warm');
+}
+
+export function getRandomWarmBottoms() {
+    return getRandomItemByTypes('bottoms', 'warm');
 }
 
 export function renderItems() {
@@ -59,50 +74,6 @@ export function renderItems() {
 
     const randomPants = getRandomPants();
     pantsDiv.src = `../assets/clothes/${randomPants.image}`;
-}
-
-export function getRandomColdTops() {
-    const selectedClothing = getSelectedClothing();
-    const selectedColdShirts = selectedClothing.filter((item) => {
-        if (item.category === 'top' && item.weather === 'cold') {
-            return item;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * selectedColdShirts.length);
-    return selectedColdShirts[randomIndex];
-}
-
-export function getRandomColdBottoms() {
-    const selectedClothing = getSelectedClothing();
-    const selectedColdBottoms = selectedClothing.filter((item) => {
-        if (item.category === 'pants' && item.weather === 'cold') {
-            return item;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * selectedColdBottoms.length);
-    return selectedColdBottoms[randomIndex];
-}
-
-export function getRandomWarmTops() {
-    const selectedClothing = getSelectedClothing();
-    const selectedWarmShirts = selectedClothing.filter((item) => {
-        if (item.category === 'top' && item.weather === 'warm') {
-            return item;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * selectedWarmShirts.length);
-    return selectedWarmShirts[randomIndex];
-}
-
-export function getRandomWarmBottoms() {
-    const selectedWarmPants = getSelectedClothing();
-    const selectedWarmBottoms = selectedWarmPants.filter((item) => {
-        if (item.category === 'pants' && item.weather === 'warm') {
-            return item;
-        }
-    });
-    const randomIndex = Math.floor(Math.random() * selectedWarmBottoms.length);
-    return selectedWarmBottoms[randomIndex];
 }
 
 export function warmClothes() {

@@ -1,17 +1,18 @@
 import { getSelectedClothing } from './utils.js';
 
-export function checkSelectedTops() {
+function checkSelectedByType(type) {
     const selectedClothing = getSelectedClothing();
-    const getSelectedShirts = selectedClothing.filter((item) => 
-        (item.category === 'top') 
+    const filteredItems = selectedClothing.filter((item) => 
+        (item.category === type) 
     );
-    return getSelectedShirts.length;
+
+    return filteredItems.length;
+}
+
+export function checkSelectedTops() {
+    return checkSelectedByType('top');
 }
 
 export function checkSelectedPants() {
-    const selectedClothing = getSelectedClothing();
-    const getSelectedPants = selectedClothing.filter((item) => 
-        (item.category === 'pants') 
-    );
-    return getSelectedPants.length;
+    return checkSelectedByType('pants');
 }
