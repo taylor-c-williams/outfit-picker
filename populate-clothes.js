@@ -5,27 +5,22 @@ import { getClothing } from './utils.js';
 //grab ul element for tops
 const topUl = document.getElementById('tops-choices');
 
-export function populateTops() {
+// could be refactored into an abstracted function to reduce repitition
+function populateClothing(type, ul) {
     const clothingArray = getClothing();
-    // grab all tops from local storage
-    const tops = clothingArray.filter((oneClothing) => {
-        if (oneClothing.category === 'top') {
-            return oneClothing.category;
-        }
-    });
-    renderClothingItems(tops, topUl);
+    // grab all pants from local storage
+    const items = clothingArray.filter(({ category }) => category === type);
+    renderClothingItems(items, ul);
+
+}
+
+export function populateTops() {
+    populateClothing('tops', topUl);
 }
 
 //grab ul element for pants
 const pantsUl = document.getElementById('pants-choices');
 
 export function populatePants() {
-    const clothingArray = getClothing();
-    // grab all pants from local storage
-    const pants = clothingArray.filter((oneClothing) => {
-        if (oneClothing.category === 'pants') {
-            return oneClothing.category;
-        }
-    });
-    renderClothingItems(pants, pantsUl);
+    populateClothing('pants', pantsUl);
 }

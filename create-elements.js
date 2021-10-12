@@ -19,6 +19,8 @@ export function renderClothingItems(itemsArray, ulToPopulate) {
         if (item.selected) switchCheck.checked = true;
 
 // add event listener with switch-select function to checkbox
+        // this is really awesome -- an event listener that just calls a function with a parameter. nice work!
+        // if you wanted to, you could make switchSelected return a function, then you don't have to do the anonymous callback here
         img.addEventListener('click', () => switchSelected(item.id));
         
 // append image & checkbox to label
